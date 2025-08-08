@@ -1,26 +1,26 @@
 # HybridOS
-Um sistema operacional híbrido experimental, seguro e modular, construído sobre o microkernel seL4 e uma camada baseado no BSD
+An experimental, secure, and modular hybrid operating system built on the seL4 microkernel and a BSD-based layer
 
-# Visão Geral
-O HybridOS é um projeto de sistema operacional que visa explorar a arquitetura de kernels híbridos, combinando a segurança e o isolamento de um microkernel com a familiaridade e a robustez de um userland Unix-like.
+# Overview
+HybridOS is an operating system project that aims to explore hybrid kernel architecture, combining the security and isolation of a microkernel with the familiarity and robustness of a Unix-like userland.
 
-Nosso objetivo é criar uma base de sistema operacional que seja:
+Our goal is to create an operating system foundation that is:
 
-Segura: Utilizando o microkernel seL4, que é formalmente verificado para ser seguro.
+Secure: Using the seL4 microkernel, which is formally verified to be secure.
 
-Modular: Construída a partir de componentes isolados (drivers, servidores, etc.) usando a ferramenta CAmkES.
+Modular: Built from isolated components (drivers, servers, etc.) using the CAmkES tool.
 
-Compatível: Oferecendo uma camada de serviços BSD-like, facilitando a portabilidade de ferramentas e aplicativos.
+Compatible: Offering a BSD-like service layer, facilitating the portability of tools and applications.
 
-# Arquitetura do Sistema
-O sistema é construído em camadas, com uma estratégia de licenciamento que reflete a sua modularidade:
+# System Architecture
+The system is built in layers, with a licensing strategy that reflects its modularity:
 
-Fundaçāo (Kernel): O microkernel seL4 (GPLv2). Esta camada é responsável por gerenciar a comunicação e a segurança entre os componentes.
+Foundation (Kernel): The seL4 microkernel (GPLv2). This layer is responsible for managing communication and security between components.
 
-Camada de Serviços: A camada de serviços, que inclui drivers, servidores de arquivos e bibliotecas essenciais.
+Service Layer: The service layer, which includes drivers, file servers, and essential libraries.
 
-# Estado do Projeto
-Este projeto está em sua fase inicial de desenvolvimento. Atualmente, o foco está na configuração do ambiente de build, na compreensão do fluxo de inicialização e na criação dos primeiros componentes minimalistas com o CAmkES.
+# Project Status
+This project is in its early stages of development. Currently, the focus is on configuring the build environment, understanding the initialisation flow, and creating the first minimalist components with CAmkES.
 
-# Como Contribuir
-Contribuições são bem-vindas! Se você estiver interessado em colaborar, por favor, leia as instruções de build e a documentação do código. Você pode reportar bugs, sugerir melhorias ou enviar pull requests.
+# How to Contribute
+Contributions are welcome! If you are interested in collaborating, please read the build instructions and code documentation. You can report bugs, suggest improvements, or submit pull requests.
