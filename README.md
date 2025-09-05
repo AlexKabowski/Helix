@@ -1,26 +1,25 @@
-# HybridOS
-An experimental, secure, and modular hybrid operating system built on the seL4 microkernel and a BSD-based layer
+# HelixOS
+An experimental, secure, and modular operating system built on the Linux 6.12 kernel, with principles from the seL4 microkernel.
 
 # Overview
-HybridOS is an operating system project that aims to explore hybrid kernel architecture, combining the security and isolation of a microkernel with the familiarity and robustness of a Unix-like userland.
+HelixOS is an operating system project that aims to exploit the Linux kernel architecture, combining the security and isolation of a microkernel with the familiarity and robustness of a Unix-like user environment.
 
 Our goal is to create an operating system foundation that is:
 
-Secure: Using the seL4 microkernel, which is formally verified to be secure.
+Secure: using a combination of AppArmor, Capabilities, and Seccomp
 
-Modular: Built from isolated components (drivers, servers, etc.) using the CAmkES tool.
+Modular: built from isolated components (softwares and apps) using modules such as Namespace and Cgroup
 
-Compatible: Offering a BSD-like service layer, facilitating the portability of tools and applications.
+Compatible: offering a service layer through Flatpak, facilitating the portability of tools and applications.
 
-# System Architecture
+# System architecture
 The system is built in layers, with a licensing strategy that reflects its modularity:
 
-Foundation (Kernel): The seL4 microkernel (GPLv2). This layer is responsible for managing communication and security between components.
+Foundation (Kernel): The Linux kernel (GPLv2). This layer is responsible for managing communication and security between components, as well as drivers and APIs.
 
-Service Layer: The service layer, which includes drivers, file servers, and essential libraries.
+Service layer: The service layer, which includes utility tools such as (shell, init, etc.) and other general-purpose programs (browsers, games).
 
-# Project Status
-This project is in its early stages of development. Currently, the focus is on configuring the build environment, understanding the initialisation flow, and creating the first minimalist components with CAmkES.
+Packaging: Use flatpak packaging technology; it is not yet defined whether there will be a package manager.
 
-# How to Contribute
-Contributions are welcome! If you are interested in collaborating, please read the build instructions and code documentation. You can report bugs, suggest improvements, or submit pull requests.
+# Project status
+This project is in its early stages of development. Currently, the focus is on setting up the build environment, understanding the startup flow, and creating the first minimalist components.
