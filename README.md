@@ -23,3 +23,27 @@ Packaging: Use flatpak packaging technology; it is not yet defined whether there
 
 # Project status
 This project is in its early stages of development. Currently, the focus is on setting up the build environment, understanding the startup flow, and creating the first minimalist components.
+
+# How to compile the kernel
+Download the official tarball directly from:
+
+https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.xz
+
+# How to compile
+1. Extract the tarball:
+```bash
+  tar -xvf linux-6.12.tar.xz
+  cd linux-6.12
+
+
+2. Copy the configuration fragment:
+    cp ../kernel/helix-minimal.config .config
+
+
+3. Apply the settings:
+    make olddefconfig
+
+4. Commit with a message.
+    make -j$(nproc)
+    sudo make modules_install
+    sudo make install
