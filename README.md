@@ -35,9 +35,10 @@ https://cdn.kernel.org/pub/linux/kernel/v6.x/linux-6.12.tar.xz
   tar -xvf linux-6.12.tar.xz
   cd linux-6.12
 
+##Antes de fazer o push, necessário tirar da marcação esse espaço.###
 
 2. Copy the configuration fragment:
-    cp ../kernel/helix-minimal.config .config
+    cp ../kernel/linux-6.12/helix-minimal.config
 
 
 3. Apply the settings:
